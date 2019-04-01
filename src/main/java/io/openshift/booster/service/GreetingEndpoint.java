@@ -30,6 +30,7 @@ public class GreetingEndpoint {
     @Produces("application/json")
     public Greeting greeting(@QueryParam("name") @DefaultValue("World") String name) {
         final String message = String.format(Greeting.FORMAT, name);
+        
         return new Greeting(message);
     }
 }
